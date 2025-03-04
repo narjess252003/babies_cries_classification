@@ -37,11 +37,11 @@ model = Sequential([
 #compile model
 model.compile(optimizer='adam', loss='sparse_categorical_crossentropy', metrics=['accuracy'])
 #train 
-print("Start Training LSTM Model...")
+print("train LSTM")
 history = model.fit(X_train, y_train, epochs=20, batch_size=32, validation_data=(X_test, y_test))
 #evaluation
 test_loss, test_acc = model.evaluate(X_test, y_test)
-print(f"LSTM Accuracy: {test_acc:.4f}")
+print(f"LSTM accuracy: {test_acc:.4f}")
 #save the model
 model.save("C:/Users/INFOKOM/Desktop/stage_pfe/baby_cries_classification/model/lstm_model.h5")
-print("LSTM Model saved as lstm_model.h5")
+print("LSTM saved")
