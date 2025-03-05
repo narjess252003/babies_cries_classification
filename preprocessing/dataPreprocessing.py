@@ -7,7 +7,7 @@ df=pd.read_csv(fileCSV)
 #Correct Missing Values(exept the label column)
 df.iloc[:, :-1] = df.iloc[:, :-1].fillna(df.iloc[:, :-1].mean()) #fillna hadhi bch tchouf missing values w replace them with the value parameter li hwa mean value in this case
 #Normalization or Standardize Features
-scaler=MinMaxScaler()  #Change to StandardScaler() /MinMaxScaler()
+scaler=StandardScaler() #Resampling – Standardize all recordings to a common sample rat
 df.iloc[:, :-1] = scaler.fit_transform(df.iloc[:, :-1])  #Apply to feature columns
 # Split Data into Train and Test
 X = df.iloc[:, :-1].values  # Features

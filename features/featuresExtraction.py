@@ -18,11 +18,11 @@ def extractChroma(y,sr):
     return chromaMean
 #extract spectral contrast features
 def extractSpectral(y,sr):
-    fmin=sr/80  # Reduce minimum frequency to avoid exceeding Nyquist limit
+    fmin=sr/80  #minimum frequency
     spectral_contrast=librosa.feature.spectral_contrast(y=y, sr=sr, fmin=fmin, n_bands=6)
     spectral_contrast_mean = np.mean(spectral_contrast, axis=1)
     return spectral_contrast_mean
-#extract zer-crosssing rate feature
+#extract zero-crosssing rate feature
 def extractZCR(y):
     zcr=librosa.feature.zero_crossing_rate(y=y)
     zcr_mean=np.mean(zcr)  

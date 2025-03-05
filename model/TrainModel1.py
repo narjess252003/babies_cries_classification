@@ -34,6 +34,7 @@ accuracy=accuracy_score(y_test, y_pred)
 print(f"SVM accuracy: {accuracy:.4f}")
 print("Classification report:")
 print(classification_report(y_test, y_pred, zero_division=1))
-#savd
+
+# Save the Trained Model
 joblib.dump(svmModel, "C:/Users/INFOKOM/Desktop/stage_pfe/baby_cries_classification/model/svm_model.pkl")
-print("SVM saved")
+print("SVM Model saved successfully")
