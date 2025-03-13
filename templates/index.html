@@ -3,8 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Baby Cries Classification</title>
+    <title>Baby Cry Analysis</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #91A29B;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar {
+            background-color: #3F554E;
+            padding: 15px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .navbar button {
+            background-color: #AAB7B1;
+            border: none;
+            padding: 12px 25px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 10px;
+            box-shadow: 3px 3px 5px #718378;
+        }
+        .navbar button:hover {
+            background-color: #8C9C95;
+        }
+        .container {
+            display: flex;
+            justify-content: space-between;
+            margin: 30px;
+        }
+        .left-panel {
+            width: 45%;
+            background-color: #355348;
+            padding: 20px;
+            border-radius: 15px;
+            color: white;
+            font-size: 20px;
+        }
+        .right-panel {
+            width: 45%;
+            background-color: #67857A;
+            padding: 20px;
+            border-radius: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .right-panel img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+    </style>
 </head>
 <body>
+
+    <div class="navbar">
+        <button>HOME</button>
+        <button>PREDICT</button>
+        <button>DETAILS</button>
+    </div>
+
+    <div class="container">
+        <div class="left-panel">
+            <h2>Introduction :</h2>
+            <p>about my website.....</p>
+            <h3>Narjess</h3>
+        </div>
+        <div class="right-panel">
+            <img src="{{ url_for('static', filename='images/why-is-baby-crying.png') }}" alt="Why a baby is crying">
+        </div>
+    </div>
+
 </body>
 </html>
